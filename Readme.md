@@ -1,4 +1,4 @@
-# CMSC733: Homework 1, AutoCalib!
+
 
 ```
 Naveen, Mangla
