@@ -134,17 +134,11 @@ def meanerror(A,K,H_list,corner_list):
         
        
     return error
-
-
-
-##############################################
-    
-path = "/home/naveen/CMSC733/AutoCalib/" ############# Change Path 
-
+ 
 
 ################################################
 Parser = argparse.ArgumentParser()
-Parser.add_argument('--BasePath', default=path+"/Calibration_Imgs",
+Parser.add_argument('--BasePath', default="/Calibration_Imgs",
                     help='Give your path')
 
 Args = Parser.parse_args()
@@ -267,7 +261,7 @@ for ind in range(len(images)):
         cv2.circle(undist, (round(corners[k][0][0]),round(corners[k][0][1])), 20, (0, 0, 255),1)
 
 
-    cv2.imwrite(path+str(ind)+".png",undist)
+    cv2.imwrite("processed_imgs/" + str(ind)+".png",undist)
 
     
 print("Mean Error= ",meaner)
